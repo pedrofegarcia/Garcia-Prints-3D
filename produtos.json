@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "nome":"Chaveiro Batman",
+        "categoria":"Geek",
+        "preco":"R$ 24,90",
+        "imagem":"assets/produtos/produto1.jpg"
+    },
+    {
+        "id":2,
+        "nome":"Copo Personalizado",
+        "categoria":"Copos",
+        "preco":"R$ 49,90",
+        "imagem":"assets/produtos/produto2.jpg"
+    },
+    {
+        "id":3,
+        "nome":"Suporte Headset",
+        "categoria":"Geek",
+        "preco":"R$ 69,90",
+        "imagem":"assets/produtos/produto3.jpg"
+    },
+    {
+        "id":4,
+        "nome":"Placa Decorativa",
+        "categoria":"Decoração",
+        "preco":"R$ 89,90",
+        "imagem":"assets/produtos/produto4.jpg"
+    }
+]
