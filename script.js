@@ -90,15 +90,21 @@ function mostrarProdutos(produtos){
         
         <div class="produto-card">
 
-            <img src="${produto.imagem}" alt="${produto.nome}">
+            <div class="produto-img">
+                <img src="${produto.imagem}" alt="${produto.nome}">
+            </div>
 
-            <h3>${produto.nome}</h3>
+            <div class="produto-info">
 
-            <p class="preco">${produto.preco}</p>
+                <h3>${produto.nome}</h3>
 
-           <a href="produto.html?id=${produto.id}" class="btn-card">
-    Ver Produto
-</a>
+                <p class="preco">${produto.preco}</p>
+
+                <a href="produto.html?id=${produto.id}" class="btn-card">
+                    Ver Produto
+                </a>
+
+            </div>
 
         </div>
 
@@ -106,7 +112,8 @@ function mostrarProdutos(produtos){
 
     });
 
-}// =========================
+}
+// =========================
 // PÁGINA DO PRODUTO
 // =========================
 
