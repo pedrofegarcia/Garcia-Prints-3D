@@ -12,26 +12,6 @@ if (menuBtn) {
 }
 
 // =========================
-// HEADER
-// =========================
-
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-
-    if (!header) return;
-
-    if (window.scrollY > 50) {
-        header.style.background = "#111111";
-        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.4)";
-    } else {
-        header.style.background = "rgba(17,17,17,.9)";
-        header.style.boxShadow = "none";
-    }
-
-});
-
-// =========================
 // CATÁLOGO
 // =========================
 
@@ -140,3 +120,18 @@ if (imagemProduto) {
         });
 
 }
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 60) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});

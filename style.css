@@ -34,6 +34,7 @@ img{
 
 
 header{
+   
     position:fixed;
     top:0;
     left:0;
@@ -45,18 +46,30 @@ header{
 
     padding:0 50px;
 
-    background:linear-gradient(
+   background: transparent;
+
+backdrop-filter: none;
+
+border-bottom: none;
+
+transition: .35s ease;
+
+    z-index:9999;
+}header.scrolled{
+
+    background: linear-gradient(
         135deg,
         rgba(15,15,15,.98),
         rgba(30,30,30,.95),
         rgba(15,15,15,.98)
     );
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: blur(18px);
 
-    border-bottom:1px solid rgba(255,106,0,.25);
+    border-bottom: 1px solid rgba(255,106,0,.25);
 
-    z-index:9999;
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+
 }
 .logo{
     display:flex;
@@ -983,11 +996,12 @@ width:100%;
 .logo img:hover{
     transform: scale(1.04);
     filter: drop-shadow(0 0 20px rgba(255,106,0,.45));
-} header::after{
+} header.scrolled::after{
     content:"";
     position:absolute;
     left:0;
     bottom:0;
+    
     width:100%;
     height:2px;
 
@@ -1012,7 +1026,7 @@ width:100%;
 .btn-orcamento:hover{
     background:#ff7d1a;
     transform:translateY(-2px);
-}header::before{
+}header.scrolled::before{
     content:"";
 
     position:absolute;
@@ -1033,7 +1047,7 @@ width:100%;
     );
 
     pointer-events:none;
-} header::after{
+} header.scrolled::after{
     content:"";
 
     position:absolute;
