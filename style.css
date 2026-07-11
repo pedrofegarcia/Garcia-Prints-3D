@@ -513,31 +513,17 @@ MENU MOBILE
    PRODUTOS
 =========================== */
 
-.produtos-wrapper{
-    position:relative;
-}
-
 .produtos-grid{
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
     gap:30px;
 
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-
-}
-
-.produtos-grid::-webkit-scrollbar{
-    display:none;
 }
 
 .produto-card{
-
-    flex:0 0 300px;
 
     background:#1b1b1b;
 
@@ -570,14 +556,6 @@ MENU MOBILE
     height:250px;
 
     object-fit:cover;
-
-    transition:.35s;
-
-}
-
-.produto-card:hover img{
-
-    transform:scale(1.08);
 
 }
 
@@ -618,16 +596,23 @@ MENU MOBILE
     transition:.3s;
 
 }
-
 .btn-card:hover{
 
     transform:scale(1.05);
 
 }
 
+
 /* ===========================
-   SETAS DOS PRODUTOS
+   SETAS PRODUTOS
 =========================== */
+
+.produtos-wrapper{
+
+    position:relative;
+
+}
+
 
 .seta-produto{
 
@@ -641,13 +626,13 @@ MENU MOBILE
 
     height:45px;
 
-    border:none;
-
     border-radius:50%;
 
     background:rgba(255,255,255,.08);
 
     backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
 
     color:#ff6a00;
 
@@ -665,11 +650,6 @@ MENU MOBILE
 
 }
 
-.seta-produto:hover{
-
-    background:rgba(255,106,0,.15);
-
-}
 
 .esquerda-produto{
 
@@ -677,11 +657,13 @@ MENU MOBILE
 
 }
 
+
 .direita-produto{
 
     right:-25px;
 
 }
+
 /* ===========================
    COMO FUNCIONA
 =========================== */
@@ -875,17 +857,30 @@ MENU MOBILE
 }/* ===========================
    GALERIA
 =========================== */
+#galeria .galeria-wrapper{
 
+    position:relative;
+
+}
+
+.galeria-janela{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
 .galeria-grid{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    display:flex;
 
     gap:20px;
 
 }
-
+.galeria-janela{
+    overflow:hidden;
+    width:100%;
+}
 .galeria-grid img{
 
     width:100%;
@@ -907,8 +902,73 @@ MENU MOBILE
     transform:scale(1.05);
 
     box-shadow:0 15px 35px rgba(255,106,0,.25);
+    
+} /* ===========================
+   SETAS GALERIA
+=========================== */
 
-}/* ===========================
+#galeria .seta-galeria{
+    
+
+    position:absolute;
+
+    top:130px;
+    
+transform:translateY(-50%);
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#ff6a00;
+
+    font-size:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+#galeria .esquerda-galeria{
+
+    left:-25px;
+
+}
+
+
+#galeria .direita-galeria{
+
+    right:-25px;
+
+}
+
+
+@media(max-width:768px){
+
+    #galeria .seta-galeria{
+
+        display:none;
+
+    }
+
+}
+
+/* ===========================
    AVALIAÇÕES
 =========================== */
 
@@ -1117,23 +1177,26 @@ footer h3{
     .seta{
         display:none;
     }
-.seta-produto{
-    display:none;
-}
+
+    .seta-produto{
+        display:none;
+    }
+
     .grid-categorias{
         overflow-x:auto;
         scroll-behavior:smooth;
     }
 
-}
-.catalogo-topo{
+    .produtos-grid{
+        display:flex;
+        overflow-x:auto;
+        gap:20px;
+        scroll-behavior:smooth;
+    }
 
-    margin:30px 0 20px;
-
-}
-.catalogo-topo{
-
-flex-direction:column;
+    .produto-card{
+        flex:0 0 85%;
+    }
 
 }
 

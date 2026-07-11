@@ -178,18 +178,4 @@ if(produtos && esquerdaProduto && direitaProduto){
 
     });
 
-}const galeria = document.querySelector(".galeria-grid");
-const esquerdaGaleria = document.querySelector(".esquerda-galeria");
-const direitaGaleria = document.querySelector(".direita-galeria");
-
-if(galeria && esquerdaGaleria && direitaGaleria){
-
-    direitaGaleria.addEventListener("click", () => {
-        galeria.scrollLeft += 350;
-    });
-
-    esquerdaGaleria.addEventListener("click", () => {
-        galeria.scrollLeft -= 350;
-    });
-
 }
