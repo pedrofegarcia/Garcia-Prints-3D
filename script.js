@@ -135,3 +135,61 @@ window.addEventListener("scroll", () => {
     }
 
 });
+// ===========================
+// CARROSSEL CATEGORIAS
+// ===========================
+
+const categorias = document.querySelector(".grid-categorias");
+const setaEsquerda = document.querySelector(".esquerda");
+const setaDireita = document.querySelector(".direita");
+
+
+if(categorias && setaEsquerda && setaDireita){
+
+    setaDireita.addEventListener("click", () => {
+        categorias.scrollLeft += 320;
+    });
+
+
+    setaEsquerda.addEventListener("click", () => {
+        categorias.scrollLeft -= 320;
+    });
+
+}
+// ===========================
+// CARROSSEL PRODUTOS
+// ===========================
+
+const produtos = document.querySelector(".produtos-grid");
+const esquerdaProduto = document.querySelector(".esquerda-produto");
+const direitaProduto = document.querySelector(".direita-produto");
+
+if(produtos && esquerdaProduto && direitaProduto){
+
+    direitaProduto.addEventListener("click", () => {
+
+        produtos.scrollLeft += 330;
+
+    });
+
+    esquerdaProduto.addEventListener("click", () => {
+
+        produtos.scrollLeft -= 330;
+
+    });
+
+}const galeria = document.querySelector(".galeria-grid");
+const esquerdaGaleria = document.querySelector(".esquerda-galeria");
+const direitaGaleria = document.querySelector(".direita-galeria");
+
+if(galeria && esquerdaGaleria && direitaGaleria){
+
+    direitaGaleria.addEventListener("click", () => {
+        galeria.scrollLeft += 350;
+    });
+
+    esquerdaGaleria.addEventListener("click", () => {
+        galeria.scrollLeft -= 350;
+    });
+
+}
