@@ -352,27 +352,33 @@ if(imagemProduto){
 
 const header = document.querySelector("header");
 
-if(document.getElementById("produto")){
+if(header){
 
-    header.classList.add("scrolled");
+    const isHome = document.querySelector("#hero");
 
-}
+    function atualizarHeader(){
 
-window.addEventListener("scroll", () => {
+        if(isHome){
 
+            if(window.scrollY > 50){
+                header.classList.add("scrolled");
+            }else{
+                header.classList.remove("scrolled");
+            }
 
-    if(window.scrollY > 60){
+        }else{
 
-        header.classList.add("scrolled");
+            header.classList.add("scrolled");
 
-    }else{
-
-        header.classList.remove("scrolled");
+        }
 
     }
 
+    window.addEventListener("scroll", atualizarHeader);
 
-});
+    atualizarHeader();
+
+}
 
 
 
@@ -776,3 +782,4 @@ categoriaAtual;
     });
 
 }
+

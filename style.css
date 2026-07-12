@@ -47,10 +47,11 @@ img{
 
 
 header{
-   
+
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
     height:125px;
 
@@ -59,30 +60,29 @@ header{
 
     padding:0 50px;
 
-   background: transparent;
+    background:transparent;
 
-backdrop-filter: none;
-
-border-bottom: none;
-
-transition: .35s ease;
+    transition:.35s ease;
 
     z-index:9999;
+
 }
+
 header.scrolled{
 
-    background: linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(15,15,15,.98),
         rgba(30,30,30,.95),
         rgba(15,15,15,.98)
     );
 
-    backdrop-filter: blur(18px);
+    backdrop-filter:blur(18px);
 
-    border-bottom: 1px solid rgba(255,106,0,.25);
+    border-bottom:1px solid rgba(255,106,0,.25);
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.35);
 
 }
 .logo{
@@ -1985,22 +1985,62 @@ span,
 
     transform:scale(1.1);
 
-}
 @media(max-width:768px){
 
     header{
 
-    height:80px;
+        height:80px;
 
-    padding:0 15px;
+        padding:0 15px;
 
-    gap:15px;
+        gap:10px;
 
-}
+    }
 
- .logo{
 
-    width:150px;
+    .logo{
+
+        width:130px;
+
+        flex-shrink:1;
+
+    }
+
+
+    .logo img{
+
+        width:130px;
+
+        height:auto;
+
+        margin-top:0;
+
+        object-fit:contain;
+
+    }
+
+
+    nav{
+
+        display:none;
+
+    }
+
+
+    .menu-btn{
+
+        display:block;
+
+        margin-left:auto;
+
+    }
+
+
+    .btn-orcamento{
+
+        display:none;
+
+    }
 
 }
 
@@ -2664,149 +2704,99 @@ footer{
 }
 
 /* ===========================
-   SOBRE
+   SOBRE - APRESENTAÇÃO
 =========================== */
 
 
-#sobre-page{
+#sobre{
 
     min-height:100vh;
 
-    padding:160px 8% 100px;
-
+    padding-top:160px;
 
     background:
-
     linear-gradient(
-        rgba(10,10,10,.75),
-        rgba(10,10,10,.75)
+        rgba(10,10,10,.65),
+        rgba(10,10,10,.65)
     ),
+    linear-gradient(rgba(255,106,0,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,106,0,.12) 1px, transparent 1px);
 
-    linear-gradient(
-        rgba(255,106,0,.12) 1px,
-        transparent 1px
-    ),
-
-    linear-gradient(
-        90deg,
-        rgba(255,106,0,.12) 1px,
-        transparent 1px
-    );
-
-
-    background-size:
-    auto,
-    60px 60px,
-    60px 60px;
+    background-size:auto,60px 60px,60px 60px;
 
 }
 
 
 
-.sobre-container{
+.sobre-trabalho{
 
     max-width:1000px;
 
-    margin:auto;
-
-    text-align:center;
-
 }
 
 
 
-.sobre-container h1{
-
-    font-size:64px;
-
-    margin-bottom:50px;
-
-}
-
-
-
-.sobre-container h1 span{
+.sobre-trabalho span{
 
     color:#ff6a00;
 
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    font-size:18px;
+
 }
 
 
 
-.historia{
+.sobre-trabalho h1{
 
-    font-size:20px;
+    font-size:clamp(40px,5vw,64px);
 
-    line-height:1.8;
+    margin:15px 0 40px;
+
+    text-align:left;
+
+}
+
+
+
+.sobre-trabalho h2{
+
+    text-align:left;
+
+    color:#ff6a00;
+
+    font-size:clamp(26px,3vw,35px);
+
+    margin-top:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.sobre-trabalho p{
 
     color:#ddd;
 
-    margin-bottom:60px;
+    font-size:clamp(16px,1.5vw,20px);
+
+    line-height:1.8;
+
+    max-width:850px;
 
 }
 
 
 
-.sobre-cards{
+.sobre-imagens{
 
-    display:flex;
+    margin-top:50px;
 
-    justify-content:center;
-
-    gap:30px;
-
-    flex-wrap:wrap;
-
-}
-
-
-
-.sobre-card{
-
-    background:#1b1b1b;
-
-    border-radius:18px;
-
-    padding:35px;
-
-    width:350px;
-
-    border:1px solid rgba(255,255,255,.05);
-
-    transition:.35s;
-
-}
-
-
-
-.sobre-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#ff6a00;
-
-    box-shadow:
-    0 15px 40px rgba(255,106,0,.2);
-
-}
-
-
-
-.sobre-card h2{
-
-    color:#ff6a00;
-
-    margin-bottom:20px;
-
-}
-
-
-
-.sobre-card p{
-
-    color:#ccc;
-
-    line-height:1.7;
+    min-height:250px;
 
 }
 
@@ -2815,25 +2805,184 @@ footer{
 @media(max-width:768px){
 
 
-.sobre-container h1{
+    #sobre{
 
-    font-size:40px;
+        padding-top:120px;
+
+        padding-left:25px;
+
+        padding-right:25px;
+
+    }
+
+
+    .sobre-trabalho{
+
+        max-width:100%;
+
+    }
+
+
+    .sobre-trabalho span{
+
+        font-size:15px;
+
+    }
+
+
+    .sobre-trabalho h1{
+
+        font-size:40px;
+
+    }
+
+
+    .sobre-trabalho h2{
+
+        margin-top:35px;
+
+    }
+
+
+    .sobre-trabalho p{
+
+        font-size:17px;
+
+    }
+
+}
+
+#orcamento{
+
+    padding-top:180px;
+
+}
+
+/* ===========================
+   CONTATO - ÍCONES VIDRO
+=========================== */
+
+.contato-icones{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    margin-top:40px;
 
 }
 
 
-.historia{
+.contato-icones a{
 
-    font-size:17px;
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+
+    border:1px solid rgba(255,255,255,.2);
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+
+    transition:.35s ease;
 
 }
 
 
-.sobre-card{
+.contato-icones img{
 
-    width:100%;
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
 
 }
 
+
+.contato-icones a:hover{
+
+    transform:translateY(-8px) scale(1.08);
+
+    box-shadow:
+    0 0 30px rgba(255,106,0,.45);
+
+}
+
+
+/* ===========================
+   EMAIL CONTATO
+=========================== */
+
+.email-contato{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.email-contato a{
+
+    color:#ff6a00;
+
+    font-size:20px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    text-shadow:
+    0 0 10px rgba(255,106,0,.4);
+
+}
+
+
+.email-contato a:hover{
+
+    transform:translateY(-3px);
+
+    text-shadow:
+    0 0 20px rgba(255,106,0,.9);
+
+}
+/* ===========================
+   LOGO FOOTER
+=========================== */
+
+.footer-logo{
+
+    width:220px;
+
+    height:auto;
+
+    margin-bottom:20px;
+
+    filter:drop-shadow(0 0 12px rgba(255,106,0,.25));
 
 }
