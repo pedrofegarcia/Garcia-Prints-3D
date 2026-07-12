@@ -1,30 +1,98 @@
 [
     {
-        "id":1,
-        "nome":"Chaveiro Batman",
-        "categoria":"Geek",
-        "preco":"R$ 24,90",
-        "imagem":"assets/produtos/produto1.jpg"
-    },
+    "id": 1,
+    "nome": "Chaveiro 3D Modelo",
+    "categoria": "Chaveiros",
+    "subcategoria": "3D",
+    "preco": "R$ 00,00",
+    "imagem": "assets/produtos/chaveiro3d.jpg",
+
+    "descricao": "Chaveiro personalizado produzido em impressão 3D com acabamento de alta qualidade.",
+
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
     {
-        "id":2,
-        "nome":"Copo Personalizado",
-        "categoria":"Copos",
-        "preco":"R$ 49,90",
-        "imagem":"assets/produtos/produto2.jpg"
+        "id": 2,
+        "nome": "Chaveiro Chapado Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Chapados",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveirochapado.jpg"
     },
+
     {
-        "id":3,
-        "nome":"Suporte Headset",
-        "categoria":"Geek",
-        "preco":"R$ 69,90",
-        "imagem":"assets/produtos/produto3.jpg"
+        "id": 3,
+        "nome": "Chaveiro Fórmula 1 Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Fórmula 1",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveirof1.jpg"
     },
+
     {
-        "id":4,
-        "nome":"Placa Decorativa",
-        "categoria":"Decoração",
-        "preco":"R$ 89,90",
-        "imagem":"assets/produtos/produto4.jpg"
+        "id": 4,
+        "nome": "Chaveiro Anime Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Animes",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveiroanime.jpg"
+    },
+
+    {
+        "id": 5,
+        "nome": "Chaveiro Super Herói Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Super Heróis",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveirosuperheroi.jpg"
+    },
+
+    {
+        "id": 6,
+        "nome": "Chaveiro Personalizado Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Personalizados",
+        "preco": "Sob consulta",
+        "imagem": "assets/produtos/chaveiropersonalizado.jpg"
+    },
+
+    {
+        "id": 7,
+        "nome": "Chaveiro Bandeira Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Bandeiras",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveirobandeira.jpg"
+    },
+
+    {
+        "id": 8,
+        "nome": "Chaveiro Abridor Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Abridores",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveiroabridor.jpg"
+    },
+
+    {
+        "id": 9,
+        "nome": "Chaveiro Time Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Times",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveirotime.jpg"
+    },
+
+    {
+        "id": 10,
+        "nome": "Chaveiro Fofo Modelo",
+        "categoria": "Chaveiros",
+        "subcategoria": "Fofos",
+        "preco": "R$ 00,00",
+        "imagem": "assets/produtos/chaveirofofo.jpg"
     }
 ]

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -23,11 +24,12 @@
 
 <header>
 
-    <div class="logo">
+    <a href="index.html" class="logo">
 
-        GARCIA PRINTS 3D
+        <img src="assets/logo.png" alt="Garcia Prints 3D">
 
-    </div>
+    </a>
+
 
     <nav>
 
@@ -37,41 +39,95 @@
 
     </nav>
 
+
 </header>
 
 <section id="produto">
 
-    <div class="produto-imagem">
 
-        <img id="imagemProduto" src="" alt="Produto">
+    <div class="produto-container">
+
+
+        <div class="produto-imagem">
+
+            <img 
+            id="imagemProduto"
+            src=""
+            alt="Produto">
+
+        </div>
+
+
+
+        <div class="produto-info">
+
+
+            <h1 id="nomeProduto"></h1>
+
+
+            <h2 
+            id="precoProduto"
+            class="preco">
+            </h2>
+
+
+
+            <p id="descricaoProduto">
+
+            </p>
+
+
+
+         <div class="botoes-principais">
+
+    <a href="#" class="orcamento">
+        <img src="assets/icons/whatsapp.png">
+        Solicitar orçamento
+    </a>
+
+
+    <a href="#" class="personalizar">
+        <img src="assets/icons/instagram.png">
+        Solicitar orçamento
+    </a>
+
+</div>
+
+
+<div class="marketplaces">
+
+    <a href="#" class="mercado">
+        <img src="assets/icons/mercadolivre.png">
+    </a>
+
+
+    <a href="#" class="shopee">
+        <img src="assets/icons/shopee.png">
+    </a>
+
+
+    <a href="#" class="amazon">
+        <img src="assets/icons/amazon.png">
+    </a>
+
+</div>
+
+
+        </div>
+
 
     </div>
 
-    <div class="produto-info">
 
-        <h1 id="nomeProduto"></h1>
-
-        <p class="preco" id="precoProduto"></p>
-
-        <p id="descricaoProduto">
-            Produto produzido em impressão 3D com acabamento de alta qualidade.
-        </p>
-
-        <div class="botoes-compra">
-
-            <a href="#" class="btn">
-                WhatsApp
-            </a>
-
-            <a href="#" class="btn btn2">
-                Mercado Livre
-            </a>
-
-        </div>
+</section>
 
     </div>
 
 </section>
+
+<script>
+console.log("PRODUTO HTML OK");
+</script>
 
 <script src="script.js"></script>
 
