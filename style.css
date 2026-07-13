@@ -21,8 +21,8 @@ body{
             rgba(10,10,10,.75),
             rgba(10,10,10,.75)
         ),
-        linear-gradient(rgba(255,106,0,.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,106,0,.08) 1px, transparent 1px);
+        linear-gradient(rgba(255, 106, 0, 0.562) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,106,0,.562) 1px, transparent 1px);
 
     background-size:auto,60px 60px,60px 60px;
 
@@ -79,7 +79,7 @@ header.scrolled{
 
     backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,106,0,.25);
+    border-bottom:1px solid rgb(255, 106, 0);
 
     box-shadow:
     0 8px 25px rgba(0,0,0,.35);
@@ -173,7 +173,7 @@ nav a:hover::after{
 
     transform:translateY(-2px);
 
-    box-shadow:0 0 20px rgba(255,106,0,.45);
+    box-shadow:0 0 20px rgb(255, 106, 0);
 
 }
 
@@ -219,8 +219,8 @@ background-repeat:no-repeat;
     inset:0;
 
     background:
-        radial-gradient(circle at 20% 40%, rgba(255,106,0,.18), transparent 35%),
-        radial-gradient(circle at 85% 20%, rgba(255,106,0,.10), transparent 25%);
+        radial-gradient(circle at 20% 40%, rgb(255, 106, 0), transparent 35%),
+        radial-gradient(circle at 85% 20%, rgb(255, 106, 0), transparent 25%);
 
     z-index:-2;
 }
@@ -230,8 +230,8 @@ background-repeat:no-repeat;
     inset:0;
 
     background-image:
-        linear-gradient(rgba(255,106,0,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,106,0,.03) 1px, transparent 1px);
+        linear-gradient(rgba(255, 106, 0, 0.637) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,106,0,.637) 1px, transparent 1px);
 
     background-size:60px 60px;
 
@@ -447,7 +447,7 @@ MENU MOBILE
 
     border-color:#ff6a00;
 
-    box-shadow:0 15px 40px rgba(255,106,0,.2);
+    box-shadow:0 15px 40px rgba(255, 106, 0, 0.671);
 
 }
 
@@ -546,7 +546,7 @@ MENU MOBILE
 
     border-color:#ff6a00;
 
-    box-shadow:0 20px 45px rgba(255,106,0,.2);
+    box-shadow:0 20px 45px rgba(255, 106, 0, 0.685);
 
 }
 
@@ -784,7 +784,7 @@ MENU MOBILE
 
     border-color:#ff6a00;
 
-    box-shadow:0 15px 35px rgba(255,106,0,.2);
+    box-shadow:0 15px 35px rgba(255, 106, 0, 0.753);
 
 }
 
@@ -1408,12 +1408,12 @@ footer h3{
     height: auto;
     display: block;
     transition: .35s;
-    filter: drop-shadow(0 0 12px rgba(255,106,0,.25));
+    filter: drop-shadow(0 0 12px rgb(255, 106, 0));
 }
 
 .logo img:hover{
     transform: scale(1.04);
-    filter: drop-shadow(0 0 20px rgba(255,106,0,.45));
+    filter: drop-shadow(0 0 20px rgb(255, 106, 0));
 } header.scrolled::after{
     content:"";
     position:absolute;
@@ -1493,8 +1493,8 @@ footer h3{
     height:500px;
     border-radius:50%;
     background:radial-gradient(circle,
-        rgba(255,106,0,.35),
-        rgba(255,106,0,.08),
+        rgb(255, 106, 0),
+        rgb(255, 106, 0),
         transparent 70%);
     filter:blur(30px);
     z-index:-1;
@@ -1505,7 +1505,7 @@ footer h3{
     width:650px;
     max-width:100%;
     animation:float 5s ease-in-out infinite;
-    filter:drop-shadow(0 25px 45px rgba(255,106,0,.35));
+    filter:drop-shadow(0 25px 45px rgb(255, 106, 0));
 }
 @keyframes float{
     0%{
@@ -1561,7 +1561,7 @@ footer h3{
 
 .btn:hover{
     transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(255,106,0,.35);
+    box-shadow:0 15px 30px rgb(255, 106, 0);
 }
 /* ===========================
    CATEGORIAS

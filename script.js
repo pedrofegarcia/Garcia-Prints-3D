@@ -109,10 +109,14 @@ if (listaProdutos) {
                 nome.includes(texto);
 
 
-                const categoria =
-                categoriaSelecionada === "Todos"
-                ||
-                produto.categoria === categoriaSelecionada;
+             const categoria =
+categoriaSelecionada === "Todos"
+||
+(
+    Array.isArray(produto.categoria)
+        ? produto.categoria.includes(categoriaSelecionada)
+        : produto.categoria === categoriaSelecionada
+);
 
 
                 return pesquisa && categoria;
@@ -135,20 +139,24 @@ if (listaProdutos) {
 
 
             const subcategorias = [
-                ...new Set(
+    ...new Set(
 
-                    lista
+        lista
 
-                    .filter(produto =>
-                        produto.categoria === categoria
-                    )
+        .filter(produto =>
+            Array.isArray(produto.categoria)
+    ? produto.categoria.includes(categoria)
+    : produto.categoria === categoria
+        )
 
-                    .map(produto =>
-                        produto.subcategoria
-                    )
+        .flatMap(produto =>
+            Array.isArray(produto.subcategoria)
+                ? produto.subcategoria
+                : [produto.subcategoria]
+        )
 
-                )
-            ];
+    )
+];
 
 
 
@@ -181,14 +189,23 @@ if (listaProdutos) {
 
 
                     const resultado =
-                    lista.filter(produto =>
+lista.filter(produto =>
 
-                        produto.categoria === botao.dataset.categoria
-                        &&
-                        produto.subcategoria === botao.dataset.subcategoria
+(
+    Array.isArray(produto.categoria)
+        ? produto.categoria.includes(botao.dataset.categoria)
+        : produto.categoria === botao.dataset.categoria
+)
 
-                    );
+&&
 
+(
+    Array.isArray(produto.subcategoria)
+        ? produto.subcategoria.includes(botao.dataset.subcategoria)
+        : produto.subcategoria === botao.dataset.subcategoria
+)
+
+);
 
                     mostrarProdutos(resultado);
 
@@ -571,7 +588,11 @@ if(produtosCategoria.length === 0) return;
 
 const subcategorias = [
     ...new Set(
-        produtosCategoria.map(produto => produto.subcategoria)
+        produtosCategoria.flatMap(produto =>
+            Array.isArray(produto.subcategoria)
+                ? produto.subcategoria
+                : [produto.subcategoria]
+        )
     )
 ];
 
@@ -591,14 +612,17 @@ categoriaAtual;
 
 
             const produtosDaSubcategoria =
-            listaProdutos.filter(produto =>
+listaProdutos.filter(produto =>
 
-                produto.categoria === categoriaAtual &&
+    produto.categoria === categoriaAtual &&
 
-                produto.subcategoria === subcategoria
+    (
+        Array.isArray(produto.subcategoria)
+            ? produto.subcategoria.includes(subcategoria)
+            : produto.subcategoria === subcategoria
+    )
 
-            );
-
+);
 
 
 
