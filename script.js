@@ -349,7 +349,6 @@ if(imagemProduto){
 // HEADER SCROLL
 // =========================
 
-
 const header = document.querySelector("header");
 
 if(header){
@@ -358,6 +357,7 @@ if(header){
 
     function atualizarHeader(){
 
+        // Página inicial
         if(isHome){
 
             if(window.scrollY > 50){
@@ -366,7 +366,10 @@ if(header){
                 header.classList.remove("scrolled");
             }
 
-        }else{
+        }
+
+        // Outras páginas
+        else{
 
             header.classList.add("scrolled");
 
@@ -374,13 +377,12 @@ if(header){
 
     }
 
+
     window.addEventListener("scroll", atualizarHeader);
 
     atualizarHeader();
 
 }
-
-
 
 
 // =========================

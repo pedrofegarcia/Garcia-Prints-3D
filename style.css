@@ -1465,25 +1465,7 @@ footer h3{
     );
 
     pointer-events:none;
-} header.scrolled::after{
-    content:"";
 
-    position:absolute;
-
-    left:0;
-    bottom:0;
-
-    width:100%;
-    height:2px;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #ff6a00,
-        transparent
-    );
-
-    box-shadow:0 0 12px #ff6a00;
 }.logo{
     overflow:hidden;
 }
@@ -2984,5 +2966,65 @@ footer{
     margin-bottom:20px;
 
     filter:drop-shadow(0 0 12px rgba(255,106,0,.25));
+
+}
+
+/* HEADER NORMAL - INÍCIO DA HOME */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:125px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 50px;
+
+    background:transparent;
+    backdrop-filter:none;
+
+    border-bottom:none;
+
+    transition:.35s ease;
+
+    z-index:9999;
+}
+
+
+/* HEADER APÓS SCROLL */
+header.scrolled{
+
+    background:rgba(15,15,15,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,106,0,.5);
+
+}
+
+
+/* LINHA LARANJA */
+header.scrolled::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #ff6a00,
+        transparent
+    );
+
+    box-shadow:0 0 12px #ff6a00;
 
 }
