@@ -58,7 +58,7 @@
 
     {
         "id": 4,
-        "nome": "Chaveiro Anime Modelo",
+        "nome": "Chaveiro Anime",
         "categoria": "Chaveiros",
         "subcategoria": "Animes",
         "preco": "R$ A PARTIR DE R$10,00",
@@ -73,7 +73,7 @@
 
     {
         "id": 5,
-        "nome": "Chaveiro Super Herói Modelo",
+        "nome": "Chaveiro Super Herói",
         "categoria": "Chaveiros",
         "subcategoria": "Super Heróis",
         "preco": "R$ A PARTIR DE R$10,00",
@@ -86,63 +86,11 @@
         "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
     },
 
-    {
-        "id": 7,
-        "nome": "Chaveiro Bandeira Modelo",
-        "categoria": "Chaveiros",
-        "subcategoria": "Bandeiras",
-        "preco": "R$ A PARTIR DE R$10,00",
-        "imagem": "assets/produtos/chaveiros/chaveirobandeira.jpg"
-        ,"descricao":"Chaveiro bandeira personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para fãs de bandeiros e colecionadores, este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho. É perfeito para quem deseja mostrar sua paixão por bandeiros de forma elegante e prática."
-        ,"whatsapp": "https://wa.me/5500000000000",
-        "mercadolivre": "https://mercadolivre.com.br",
-        "shopee": "https://shopee.com.br",
-        "amazon": "https://amazon.com.br",
-        "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
-    },
-
-    {
-        "id": 8,
-        "nome": "Chaveiro Abridor Modelo",
-        "categoria": "Chaveiros",
-        "subcategoria": "Abridores",
-        "preco": "R$ A PARTIR DE R$10,00",
-        "imagem": "assets/produtos/chaveiros/chaveiroabridor.jpg"
-        ,"descricao":"Chaveiro abridor personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para fãs de abridores e colecionadores, este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho. É perfeito para quem deseja mostrar sua paixão por abridores de forma elegante e prática."
-        ,"whatsapp": "https://wa.me/5500000000000",
-        "mercadolivre": "https://mercadolivre.com.br",
-        "shopee": "https://shopee.com.br",
-        "amazon": "https://amazon.com.br",
-        "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
-    },
-
-    {
-        "id": 9,
-        "nome": "Chaveiro Time Modelo",
-        "categoria": "Chaveiros",
-        "subcategoria": [
-            "Times",
-            "Esportes"
-    
-    ],
-
-
-
-        "preco": "R$ A PARTIR DE R$10,00",
-        "imagem": "assets/produtos/chaveiros/chaveirotimes.jpg"
-        ,"descricao":"Chaveiro time personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para fãs de times e colecionadores, este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho. É perfeito para quem deseja mostrar sua paixão por times de forma elegante e prática."
-        ,"whatsapp": "https://wa.me/5500000000000",
-        "mercadolivre": "https://mercadolivre.com.br",
-        "shopee": "https://shopee.com.br",
-        "amazon": "https://amazon.com.br",
-        "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
-    },
-
-    {
+        {
         "id": 10,
         "nome": "Chaveiro Fofo cachorros",
         "categoria": "Chaveiros",
-        "subcategoria": "Fofos",
+        "subcategoria": "Chapados",
         "preco": "R$ A PARTIR DE R$10,00",
         "imagem": "assets/produtos/chaveiros/chaveirofofo.jpg"  
         ,"descricao":"Chaveiro fofo personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para fãs de animais e colecionadores, este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho. É perfeito para quem deseja mostrar sua paixão por animais de estimação de forma elegante e prática."
@@ -152,21 +100,6 @@
         "amazon": "https://amazon.com.br",
         "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
     },
-
-    {
-    "id": 11,
-    "nome": "chaveiro de click",
-    "categoria": "Chaveiros",
-    "subcategoria": "Click",
-    "preco": "A partir de R$ 25,00",
-    "imagem": "assets/produtos/chaveiros/click.jpg",
-    "descricao": "Chaveiro de click satisfatório produzido em impressão 3D com acabamento de alta qualidade. Ideal para aliviar o estresse e proporcionar momentos de diversão, este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho. É perfeito para quem deseja ter um acessório divertido e funcional sempre à mão.",
-    "whatsapp": "https://wa.me/5500000000000",
-    "mercadolivre": "https://mercadolivre.com.br",
-    "shopee": "https://shopee.com.br",
-    "amazon": "https://amazon.com.br",
-    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
-},
 
 {
     "id": 11,
@@ -344,10 +277,7 @@
     "id": 21,
     "nome": "Chaveiro Hello Kitty",
     "categoria": "Chaveiros",
-     "subcategoria": [
-         "3D",
-        "Fofos"
-    ],
+     "subcategoria":"3D",
     "preco": "A partir de R$ 10,00",
     "imagem": "assets/produtos/chaveiros/hellokitty.jpg",
     "descricao": "chaveiro Hello Kitty personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para presentear quem gosta de Hello Kitty. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
@@ -362,10 +292,8 @@
     "id": 22,
     "nome": "chaveiro Gatos",
     "categoria": "Chaveiros",
-     "subcategoria": [
-         "3D",
-        "Fofos" 
-    ],
+     "subcategoria": "3D",
+        
     "preco": "A partir de R$ 10,00",
     "imagem": "assets/produtos/chaveiros/gatos.jpg",
     "descricao": "chaveiro gatos personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para presentear quem gosta de gatos. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
@@ -464,10 +392,9 @@
     "id": 28,
     "nome": "Chaveiro Hambúrguer",
     "categoria": "Chaveiros",
- "subcategoria": [
-         "3D",
-        "Fofos" 
-    ],    "preco": "A partir de R$ 10,00",
+ "subcategoria": "3D",
+         
+    "preco": "A partir de R$ 10,00",
     "imagem": "assets/produtos/chaveiros/hamburguer.jpg",
     "descricao": "Chaveiro mini hambúrguer personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para presentear quem gosta de comidas e coisas fofas. Este Chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
     "whatsapp": "https://wa.me/5500000000000",
@@ -481,10 +408,8 @@
     "id": 29,
     "nome": "Chaveiro Coelho",
     "categoria": "Chaveiros",
- "subcategoria": [
-         "3D",
-        "Fofos" 
-    ],    "preco": "A partir de R$ 10,00",
+ "subcategoria":"3D",
+  "preco": "A partir de R$ 10,00",
     "imagem": "assets/produtos/chaveiros/coelho.jpg",
     "descricao": "Chaveiro Coelho personalizado produzido em impressão 3D com acabamento de alta qualidade. Ideal para presentear quem gosta de animais e coisas fofas. Este Chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho",
     "whatsapp": "https://wa.me/5500000000000",
@@ -504,8 +429,7 @@
  "subcategoria": [
          "3D",
         "Animes",
-        "Fofos",
-        "articulados"
+        "Articulados"
     ],    "preco": "A partir de R$ 15,00",
     "imagem": "assets/produtos/chaveiros/Charizard.png",
     "descricao": "Chaveiro e brinquedo articulado produzido em impressão 3D com acabamento de alta qualidade. Ideal para presentear quem gosta de Animes ou Pokémon. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
@@ -774,7 +698,7 @@
         "Chaveiros"
   ],
   "subcategoria": [
-       "articulados"
+       "Chapados"
   ],
   "preco": "A partir de R$ 10,00",
   "imagem":"assets/produtos/chaveiros/pegadacachorro.jpg",
@@ -1057,7 +981,7 @@
           "Chaveiros"
   ],
   "subcategoria": [
-          "articulados",
+          "Chapados",
           "Fórmula 1"
   ],
   "preco": "A partir de R$ 10,00",
@@ -1240,6 +1164,486 @@
     "subcategoria": ["Chapados", "Animes"],
     "preco": "A partir de R$ 10,00",
     "imagem": "assets/produtos/chaveiros/renegado.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+
+{
+    "id": 73,
+    "nome": "Chaveiro Faca Bleach",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto73.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 74,
+    "nome": "Chaveiro Faca Black Clover",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto74.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 75,
+    "nome": "Chaveiro Nuvem Itachi",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto75.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 76,
+    "nome": "Chaveiro Solo Lev",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto76.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 77,
+    "nome": "Chaveiro Zoro",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto77.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 78,
+    "nome": "Chaveiro Símbolo Uchiha",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto78.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 79,
+    "nome": "Chaveiro Bleach Urahara",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto79.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 80,
+    "nome": "Chaveiro Bleach Chama Azul",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto80.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 81,
+    "nome": "Chaveiro Símbolo do Superman",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto81.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 82,
+    "nome": "Chaveiro Homem-Aranha",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto82.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 83,
+    "nome": "Chaveiro Batman versão LEGO Batman",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto83.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 84,
+    "nome": "Chaveiro Vingadores Iniciais HQ",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto84.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 85,
+    "nome": "Chaveiro Deadpool",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto85.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 86,
+    "nome": "Chaveiro Logo Batman",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto86.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 87,
+    "nome": "Chaveiro Símbolo Avengers",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto87.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 88,
+    "nome": "Chaveiro Pantera Negra",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto88.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 89,
+    "nome": "Chaveiro Doutor Destino",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto89.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 90,
+    "nome": "Chaveiro Homem de Ferro",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto90.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 91,
+    "nome": "Chaveiro Símbolo Heróis DC",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Super Heróis"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto91.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+}, 
+{
+    "id": 92,
+    "nome": "Chaveiro Articulado Mewtwo",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto92.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 93,
+    "nome": "Chaveiro Articulado Stormtrooper",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto93.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 94,
+    "nome": "Chaveiro Articulado Pikachu",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados",
+        "Animes"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto94.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 95,
+    "nome": "Chaveiro Articulado Gato Preto",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto95.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 96,
+    "nome": "Chaveiro Articulado Água-Viva",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto96.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 97,
+    "nome": "Chaveiro Articulado Lontra",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto97.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 98,
+    "nome": "Chaveiro Articulado Caranguejo",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto98.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 99,
+    "nome": "Chaveiro Articulado Esqueleto Minecraft",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados",
+        "Games"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto99.jpg",
+    "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
+    "whatsapp": "https://wa.me/5500000000000",
+    "mercadolivre": "https://mercadolivre.com.br",
+    "shopee": "https://shopee.com.br",
+    "amazon": "https://amazon.com.br",
+    "instagram": "https://www.instagram.com/garcia_printsgp3d?igsh=MXhsMHowdXprZzBkcg=="
+},
+{
+    "id": 100,
+    "nome": "Chaveiro Articulado Capivara",
+    "categoria": "Chaveiros",
+    "subcategoria": [
+        "Chapados",
+        "Articulados"
+    ],
+    "preco": "A partir de R$ 10,00",
+    "imagem": "assets/produtos/chaveiros/foto100.jpg",
     "descricao": "Chaveiro produzido em impressão 3D com acabamento de alta qualidade. Este chaveiro é resistente e durável, garantindo que você possa exibir seu estilo único com orgulho.",
     "whatsapp": "https://wa.me/5500000000000",
     "mercadolivre": "https://mercadolivre.com.br",

@@ -1,4 +1,6 @@
 console.log("SCRIPT FUNCIONANDO");
+
+
 // =========================
 // MENU MOBILE
 // =========================
@@ -6,9 +8,9 @@ console.log("SCRIPT FUNCIONANDO");
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
 
-if (menuBtn) {
+if(menuBtn && nav){
 
-    menuBtn.addEventListener("click", () => {
+    menuBtn.addEventListener("click",()=>{
 
         nav.classList.toggle("active");
 
@@ -17,112 +19,160 @@ if (menuBtn) {
 }
 
 
+
 // =========================
 // CATÁLOGO
 // =========================
 
 const listaProdutos = document.getElementById("lista-produtos");
 const subfiltros = document.getElementById("subfiltros");
+const pesquisa = document.getElementById("pesquisa");
 
 
-if (listaProdutos) {
+
+if(listaProdutos){
+
 
     fetch("produtos.json")
 
     .then(res => res.json())
 
-    .then(listaDoJson => {
-
-        mostrarProdutos(listaDoJson);
+    .then(produtos => {
 
 
-        const pesquisaInput = document.getElementById("pesquisa");
+        mostrarProdutos(produtos);
+
+
+
+        // =========================
+        // FILTROS
+        // =========================
 
 
         document.querySelectorAll(".filtro")
-        .forEach(botao => {
+
+        .forEach(botao=>{
+
 
             botao.addEventListener("click",()=>{
 
 
                 document.querySelectorAll(".filtro")
-                .forEach(b =>
-                    b.classList.remove("filtroativo")
-                );
+
+                .forEach(b=>{
+
+                    b.classList.remove("filtroativo");
+
+                });
+
 
 
                 botao.classList.add("filtroativo");
+
 
 
                 const categoria =
                 botao.dataset.categoria;
 
 
-                mostrarSubcategorias(
-                    listaDoJson,
+
+                criarSubfiltros(
+                    produtos,
                     categoria
                 );
 
 
+
                 filtrarProdutos(
-                    listaDoJson,
+                    produtos,
                     categoria
                 );
 
 
             });
+
 
         });
 
 
 
-        if(pesquisaInput){
 
-            pesquisaInput.addEventListener("input",()=>{
 
-                filtrarProdutos(listaDoJson);
+        // =========================
+        // PESQUISA
+        // =========================
+
+
+        if(pesquisa){
+
+
+            pesquisa.addEventListener("input",()=>{
+
+
+                filtrarProdutos(
+                    produtos,
+                    "Todos"
+                );
+
 
             });
+
 
         }
 
 
 
-        function filtrarProdutos(lista,categoriaSelecionada="Todos"){
 
 
-            const texto =
-            pesquisaInput
-            ? pesquisaInput.value.toLowerCase()
+        function filtrarProdutos(lista,categoria){
+
+
+            const texto = pesquisa
+            ? pesquisa.value.toLowerCase()
             : "";
 
 
-            const resultado =
-            lista.filter(produto=>{
+
+            const resultado = lista.filter(produto=>{
 
 
                 const nome =
                 produto.nome.toLowerCase();
 
 
-                const pesquisa =
+
+                const pesquisaOk =
                 nome.includes(texto);
 
 
-             const categoria =
-categoriaSelecionada === "Todos"
-||
-(
-    Array.isArray(produto.categoria)
-        ? produto.categoria.includes(categoriaSelecionada)
-        : produto.categoria === categoriaSelecionada
-);
+
+                const categoriaOk =
+
+                categoria === "Todos"
+
+                ||
+
+                (
+
+                    Array.isArray(produto.categoria)
+
+                    ?
+
+                    produto.categoria.includes(categoria)
+
+                    :
+
+                    produto.categoria === categoria
+
+                );
 
 
-                return pesquisa && categoria;
+
+                return pesquisaOk && categoriaOk;
 
 
             });
+
 
 
             mostrarProdutos(resultado);
@@ -132,31 +182,69 @@ categoriaSelecionada === "Todos"
 
 
 
-        function mostrarSubcategorias(lista,categoria){
+
+
+
+
+        function criarSubfiltros(lista,categoria){
 
 
             subfiltros.innerHTML = "";
 
 
+
+            if(categoria === "Todos"){
+
+                return;
+
+            }
+
+
+
             const subcategorias = [
-    ...new Set(
 
-        lista
+                ...new Set(
 
-        .filter(produto =>
-            Array.isArray(produto.categoria)
-    ? produto.categoria.includes(categoria)
-    : produto.categoria === categoria
-        )
+                    lista
 
-        .flatMap(produto =>
-            Array.isArray(produto.subcategoria)
-                ? produto.subcategoria
-                : [produto.subcategoria]
-        )
+                    .filter(produto=>{
 
-    )
-];
+
+                        return Array.isArray(produto.categoria)
+
+                        ?
+
+                        produto.categoria.includes(categoria)
+
+                        :
+
+                        produto.categoria === categoria;
+
+
+                    })
+
+
+                    .flatMap(produto=>{
+
+
+                        return Array.isArray(produto.subcategoria)
+
+                        ?
+
+                        produto.subcategoria
+
+                        :
+
+                        [produto.subcategoria];
+
+
+                    })
+
+                )
+
+            ];
+
+
 
 
 
@@ -165,14 +253,17 @@ categoriaSelecionada === "Todos"
 
                 subfiltros.innerHTML += `
 
-                <button 
-                class="filtro subfiltro"
-                data-subcategoria="${sub}"
-                data-categoria="${categoria}">
+                    <button
+
+                    class="filtro subfiltro"
+
+                    data-categoria="${categoria}"
+
+                    data-subcategoria="${sub}">
 
                     ${sub}
 
-                </button>
+                    </button>
 
                 `;
 
@@ -181,31 +272,60 @@ categoriaSelecionada === "Todos"
 
 
 
+
             document.querySelectorAll(".subfiltro")
+
             .forEach(botao=>{
 
 
                 botao.addEventListener("click",()=>{
 
 
-                    const resultado =
-lista.filter(produto =>
+                    const resultado = lista.filter(produto=>{
 
-(
-    Array.isArray(produto.categoria)
-        ? produto.categoria.includes(botao.dataset.categoria)
-        : produto.categoria === botao.dataset.categoria
-)
 
-&&
+                        const categoriaOk =
 
-(
-    Array.isArray(produto.subcategoria)
-        ? produto.subcategoria.includes(botao.dataset.subcategoria)
-        : produto.subcategoria === botao.dataset.subcategoria
-)
+                        Array.isArray(produto.categoria)
 
-);
+                        ?
+
+                        produto.categoria.includes(
+                            botao.dataset.categoria
+                        )
+
+                        :
+
+                        produto.categoria ===
+                        botao.dataset.categoria;
+
+
+
+
+
+                        const subOk =
+
+                        Array.isArray(produto.subcategoria)
+
+                        ?
+
+                        produto.subcategoria.includes(
+                            botao.dataset.subcategoria
+                        )
+
+                        :
+
+                        produto.subcategoria ===
+                        botao.dataset.subcategoria;
+
+
+
+                        return categoriaOk && subOk;
+
+
+                    });
+
+
 
                     mostrarProdutos(resultado);
 
@@ -219,593 +339,266 @@ lista.filter(produto =>
         }
 
 
+
+    })
+
+    .catch(erro=>{
+
+        console.error(
+            "ERRO AO CARREGAR PRODUTOS:",
+            erro
+        );
+
     });
+
 
 }
 
 
 
-function mostrarProdutos(produtos){
 
+
+
+
+// =========================
+// MOSTRAR PRODUTOS
+// =========================
+
+
+function mostrarProdutos(produtos){
 
     listaProdutos.innerHTML = "";
 
 
-    produtos.forEach(produto=>{
+    const mobile = window.innerWidth <= 768;
+
+
+    // =========================
+    // PC NORMAL
+    // =========================
+
+    if(!mobile){
+
+        produtos.forEach(produto=>{
+
+            listaProdutos.innerHTML += `
+
+            <div class="produto-card">
+
+                <div class="produto-img">
+
+                    <img 
+                    src="${produto.imagem || 'assets/sem-imagem.jpg'}"
+                    alt="${produto.nome}">
+
+                </div>
+
+
+                <a 
+                href="produto.html?id=${produto.id}"
+                class="btn-card">
+
+                    Ver Produto
+
+                </a>
+
+            </div>
+
+            `;
+
+        });
+
+
+        return;
+
+    }
+
+
+
+    // =========================
+    // MOBILE - CARROSSEIS DE 6
+    // =========================
+
+
+    for(let i = 0; i < produtos.length; i += 6){
+
+
+        const grupo = produtos.slice(i, i + 6);
+
 
 
         listaProdutos.innerHTML += `
 
-        <div class="produto-card">
-
-            <div class="produto-img">
-
-                <img 
-                src="${produto.imagem || 'assets/sem-imagem.jpg'}"
-                alt="${produto.nome}">
-
-            </div>
+        <div class="carrossel-produtos-mobile">
 
 
-            <a 
-            href="produto.html?id=${produto.id}"
-            class="btn-card">
+            ${grupo.map(produto=>`
 
-                Ver Produto
 
-            </a>
+                <div class="produto-card">
+
+
+                    <div class="produto-img">
+
+                        <img 
+                        src="${produto.imagem || 'assets/sem-imagem.jpg'}"
+                        alt="${produto.nome}">
+
+                    </div>
+
+
+                    <a 
+                    href="produto.html?id=${produto.id}"
+                    class="btn-card">
+
+                        Ver Produto
+
+                    </a>
+
+
+                </div>
+
+
+            `).join("")}
+
 
         </div>
 
         `;
 
 
-    });
-
+    }
 
 }
 
+window.addEventListener("scroll",()=>{
+
+    const header = document.querySelector("header");
+
+    if(window.scrollY > 50){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
 // =========================
 // PÁGINA DO PRODUTO
 // =========================
 
+const params = new URLSearchParams(window.location.search);
 
-const imagemProduto = document.getElementById("imagemProduto");
-
-console.log("IMAGEM PRODUTO:", imagemProduto);
-
-if(imagemProduto){
+const idProduto = params.get("id");
 
 
-    const parametros =
-    new URLSearchParams(window.location.search);
-
-
-
-    const idProduto =
-    Number(parametros.get("id"));
-
-
+if(idProduto){
 
     fetch("produtos.json")
 
     .then(res => res.json())
 
-    .then(listaDoJson => {
-
-    console.log("JSON CHEGOU:", listaDoJson);
-
-    const produto =
-    listaDoJson.find(
-        item => item.id === idProduto
-    );
-
-    console.log("PRODUTO ENCONTRADO:", produto);
-    console.log("DESCRIÇÃO:", produto.descricao);
-
-        if(!produto) return;
+    .then(produtos=>{
 
 
-
-        document.getElementById("imagemProduto").src =
-        produto.imagem;
-
-
-
-        document.getElementById("nomeProduto").textContent =
-        produto.nome;
+        const produto = produtos.find(
+            p => p.id == idProduto
+        );
 
 
+        if(!produto){
 
-        document.getElementById("precoProduto").textContent =
-        produto.preco;
+            console.error("Produto não encontrado");
 
-        console.log("DESCRIÇÃO:", produto.descricao);
-        console.log("PRODUTO COMPLETO:", produto);
-
-        document.getElementById("descricaoProduto").textContent =
-        produto.descricao;
-
-        document.querySelector(".orcamento").href =
-        produto.whatsapp || "#";
-
-
-        document.querySelector(".personalizar").href =
-        produto.instagram || "#";
-
-
-        document.querySelector(".mercado").href =
-        produto.mercadolivre || "#";
-
-
-        document.querySelector(".shopee").href =
-        produto.shopee || "#";
-
-
-        document.querySelector(".amazon").href =
-        produto.amazon || "#";
-
-
-        document.querySelectorAll(".botoes-compra a")
-        .forEach(botao => {
-
-            botao.target = "_blank";
-
-});
-
-    });
-
-
-
-}
-
-
-
-
-// =========================
-// HEADER SCROLL
-// =========================
-
-const header = document.querySelector("header");
-
-if(header){
-
-    const isHome = document.querySelector("#hero");
-
-    function atualizarHeader(){
-
-        // Página inicial
-        if(isHome){
-
-            if(window.scrollY > 50){
-                header.classList.add("scrolled");
-            }else{
-                header.classList.remove("scrolled");
-            }
+            return;
 
         }
 
-        // Outras páginas
-        else{
 
-            header.classList.add("scrolled");
+        // IMAGEM
+
+        const imagem = document.getElementById("imagemProduto");
+
+        if(imagem){
+
+            imagem.src = produto.imagem;
+            imagem.alt = produto.nome;
 
         }
 
-    }
 
 
-    window.addEventListener("scroll", atualizarHeader);
+        // NOME
 
-    atualizarHeader();
+        const nome = document.getElementById("nomeProduto");
 
-}
+        if(nome){
 
+            nome.innerHTML = produto.nome;
 
-// =========================
-// CARROSSEL CATEGORIAS HOME
-// =========================
+        }
 
 
-const categoriasHome =
-document.querySelector(".grid-categorias");
 
+        // DESCRIÇÃO
 
-const setaEsquerda =
-document.querySelector(".esquerda");
+        const descricao = document.getElementById("descricaoProduto");
 
+        if(descricao){
 
-const setaDireita =
-document.querySelector(".direita");
+            descricao.innerHTML = produto.descricao;
 
+        }
 
 
-if(
-categoriasHome &&
-setaEsquerda &&
-setaDireita
-){
 
+        // PREÇO
 
-    setaDireita.addEventListener("click",()=>{
+        const preco = document.getElementById("precoProduto");
 
+        if(preco){
 
-        categoriasHome.scrollLeft += 320;
+            preco.innerHTML = produto.preco;
 
+        }
 
-    });
 
 
+        // WHATSAPP
 
-    setaEsquerda.addEventListener("click",()=>{
+        const whatsapp = document.getElementById("whatsappProduto");
 
+        if(whatsapp){
 
-        categoriasHome.scrollLeft -= 320;
+            whatsapp.href = produto.whatsapp;
 
+        }
 
-    });
 
 
-}
+        // INSTAGRAM
 
+        const instagram = document.getElementById("instagramProduto");
 
+        if(instagram){
 
+            instagram.href = produto.instagram;
 
-// =========================
-// CARROSSEL PRODUTOS HOME
-// =========================
+        }
 
 
-const produtosCarrossel =
-document.querySelector(".produtos-grid");
+    })
 
+    .catch(erro=>{
 
-const esquerdaProduto =
-document.querySelector(".esquerda-produto");
-
-
-const direitaProduto =
-document.querySelector(".direita-produto");
-
-
-
-if(
-produtosCarrossel &&
-esquerdaProduto &&
-direitaProduto
-){
-
-
-    direitaProduto.addEventListener("click",()=>{
-
-
-        produtosCarrossel.scrollLeft += 330;
-
-
-    });
-
-
-
-    esquerdaProduto.addEventListener("click",()=>{
-
-
-        produtosCarrossel.scrollLeft -= 330;
-
-
-    });
-
-
-
-}
-
-
-
-
-// =========================
-// CARROSSEL GALERIA
-// =========================
-
-
-const galeria =
-document.querySelector(".galeria-grid");
-
-
-const esquerdaGaleria =
-document.querySelector(".esquerda-galeria");
-
-
-const direitaGaleria =
-document.querySelector(".direita-galeria");
-
-
-
-if(
-galeria &&
-esquerdaGaleria &&
-direitaGaleria
-){
-
-
-    direitaGaleria.addEventListener("click",()=>{
-
-
-        galeria.scrollLeft += 330;
-
-
-    });
-
-
-
-    esquerdaGaleria.addEventListener("click",()=>{
-
-
-        galeria.scrollLeft -= 330;
-
-
-    });
-
-
-}
-
-
-
-
-// =========================
-// PÁGINA DE CATEGORIA
-// =========================
-
-
-const listaCategoria = document.getElementById("lista-categoria");
-
-
-if(listaCategoria){
-
-
-    const parametros = 
-    new URLSearchParams(window.location.search);
-
-
-    const categoriaAtual =
-    parametros.get("categoria");
-
-
-
-    fetch("produtos.json")
-
-    .then(res => res.json())
-
-    .then(listaProdutos => {
-
-
-
-       const produtosCategoria =
-listaProdutos.filter(produto =>
-    produto.categoria === categoriaAtual
-);
-
-
-if(produtosCategoria.length === 0) return;
-
-const subcategorias = [
-    ...new Set(
-        produtosCategoria.flatMap(produto =>
-            Array.isArray(produto.subcategoria)
-                ? produto.subcategoria
-                : [produto.subcategoria]
-        )
-    )
-];
-
-       
-
-
-
-        document.getElementById("titulo-categoria").textContent =
-categoriaAtual;
-
-
-        listaCategoria.innerHTML = "";
-
-
-
-        subcategorias.forEach((subcategoria,index)=>{
-
-
-            const produtosDaSubcategoria =
-listaProdutos.filter(produto =>
-
-    produto.categoria === categoriaAtual &&
-
-    (
-        Array.isArray(produto.subcategoria)
-            ? produto.subcategoria.includes(subcategoria)
-            : produto.subcategoria === subcategoria
-    )
-
-);
-
-
-
-            listaCategoria.innerHTML += `
-
-
-            <section class="subcategoria-bloco">
-
-
-                <h2>${subcategoria}</h2>
-
-
-
-                <div class="categoria-wrapper">
-
-
-
-                    <button 
-                    class="seta-categoria esquerda-cat"
-                    data-id="${index}">
-
-                        ‹
-
-                    </button>
-
-
-
-
-                    <div 
-                    class="categoria-carrossel"
-                    id="categoria-${index}">
-
-
-
-                    ${
-                    produtosDaSubcategoria.length > 0
-
-
-                    ?
-
-
-                    produtosDaSubcategoria.map(produto=>`
-
-
-
-                        <div class="produto-card">
-
-
-
-                            <div class="produto-img">
-
-
-                                <img 
-                                src="${produto.imagem}"
-                                alt="Produto">
-
-
-                            </div>
-
-
-
-
-                            <a 
-                            href="produto.html?id=${produto.id}"
-                            class="btn-card">
-
-
-                                Ver Produto
-
-
-                            </a>
-
-
-
-
-                        </div>
-
-
-
-                    `).join("")
-
-
-
-                    :
-
-
-                    "<p>Produtos em breve</p>"
-
-
-
-                    }
-
-
-
-                    </div>
-
-
-
-
-
-                    <button 
-                    class="seta-categoria direita-cat"
-                    data-id="${index}">
-
-
-                        ›
-
-
-                    </button>
-
-
-
-
-                </div>
-
-
-
-            </section>
-
-
-
-            `;
-
-
-
-        });
-
-
-
-
-
-        // =========================
-        // BOTÕES DO CARROSSEL
-        // =========================
-
-
-
-        document.querySelectorAll(".direita-cat")
-        .forEach(botao=>{
-
-
-            botao.addEventListener("click",()=>{
-
-
-                const id =
-                botao.dataset.id;
-
-
-
-                document
-                .getElementById(`categoria-${id}`)
-                .scrollLeft += 350;
-
-
-
-            });
-
-
-
-        });
-
-
-
-
-
-               document.querySelectorAll(".esquerda-cat")
-        .forEach(botao=>{
-
-            botao.addEventListener("click",()=>{
-
-                const id =
-                botao.dataset.id;
-
-                document
-                .getElementById(`categoria-${id}`)
-                .scrollLeft -= 350;
-
-            });
-
-        });
-
+        console.error(
+            "Erro ao carregar produto:",
+            erro
+        );
 
     });
 
 }
-
