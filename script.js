@@ -293,40 +293,59 @@ lista.filter(produto =>
 
 function mostrarProdutos(produtos){
 
-
     listaProdutos.innerHTML = "";
 
+    const tamanhoCarrossel = 6;
 
-    produtos.forEach(produto=>{
+
+    for(let i = 0; i < produtos.length; i += tamanhoCarrossel){
+
+
+        const bloco = produtos.slice(i, i + tamanhoCarrossel);
 
 
         listaProdutos.innerHTML += `
 
-        <div class="produto-card">
-
-            <div class="produto-img">
-
-                <img 
-                src="${produto.imagem || 'assets/sem-imagem.jpg'}"
-                alt="${produto.nome}">
-
-            </div>
+        <div class="carrossel-produtos-mobile">
 
 
-            <a 
-            href="produto.html?id=${produto.id}"
-            class="btn-card">
+            ${
+                bloco.map(produto=>`
 
-                Ver Produto
+                <div class="produto-card">
 
-            </a>
+
+                    <div class="produto-img">
+
+                        <img 
+                        src="${produto.imagem || 'assets/sem-imagem.jpg'}"
+                        alt="${produto.nome}">
+
+                    </div>
+
+
+                    <a 
+                    href="produto.html?id=${produto.id}"
+                    class="btn-card">
+
+                        Ver Produto
+
+                    </a>
+
+
+                </div>
+
+                `).join("")
+            }
+
 
         </div>
+
 
         `;
 
 
-    });
+    }
 
 
 }

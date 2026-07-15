@@ -2085,21 +2085,29 @@ span,
     display:flex;
     gap:25px;
 
-    overflow:hidden;
+    overflow-x:auto;
+    overflow-y:hidden;
 
     scroll-behavior:smooth;
 
     width:100%;
 
+    scrollbar-width:none;
+
 }
 
+
+.categoria-carrossel::-webkit-scrollbar{
+
+    display:none;
+
+}
 
 .categoria-carrossel .produto-card{
 
-    min-width:250px;
+    flex:0 0 250px;
 
 }
-
 
 .categoria-carrossel img{
 
